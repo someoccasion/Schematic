@@ -5,6 +5,7 @@ import (
 	"strings"
 
 	"github.com/hydridity/Schematic/pkg/parser"
+	"github.com/hydridity/Schematic/pkg/schema/constraints"
 	ctx "github.com/hydridity/Schematic/pkg/schema/context"
 )
 
@@ -14,7 +15,7 @@ type Schema interface {
 }
 
 type Impl struct {
-	Constraints []ctx.Constraint
+	Constraints []constraints.Constraint
 	ast         *parser.SchemaAST
 }
 
